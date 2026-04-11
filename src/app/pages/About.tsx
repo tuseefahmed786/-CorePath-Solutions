@@ -185,7 +185,7 @@ export default function About() {
       </AnimatedSection>
 
       {/* Team */}
-      <AnimatedSection className="py-20 bg-muted/30">
+      {/* <AnimatedSection className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Meet Our Leadership</h2>
@@ -216,7 +216,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       {/* Achievements */}
       <AnimatedSection className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
