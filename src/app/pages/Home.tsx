@@ -460,41 +460,6 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      {/* Awards & Recognition */}
-      <AnimatedSection className="py-20 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">Awards & Recognition</h2>
-            <p className="text-xl text-muted-foreground">
-              Industry recognition for our commitment to excellence
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { year: '2026', award: 'Best Tech Company', org: 'Houston Business Awards' },
-              { year: '2025', award: 'Innovation Leader', org: 'Tech Innovation Summit' },
-              { year: '2024', award: 'Top Developer Team', org: 'Dev Excellence Awards' },
-              { year: '2023', award: 'Client Choice Award', org: 'Industry Partners' },
-            ].map((award, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl border-2 border-yellow-200 dark:border-yellow-900/30 text-center hover:shadow-xl transition-all"
-              >
-                <Award className="w-12 h-12 text-yellow-600 dark:text-yellow-500 mx-auto mb-4" />
-                <div className="text-sm font-semibold text-yellow-600 dark:text-yellow-500 mb-2">{award.year}</div>
-                <h3 className="text-lg font-bold mb-1">{award.award}</h3>
-                <p className="text-sm text-muted-foreground">{award.org}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </AnimatedSection>
-
       {/* Latest Insights Preview */}
       <AnimatedSection className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
