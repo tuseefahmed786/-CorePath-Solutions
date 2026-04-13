@@ -348,7 +348,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6">
             {[
               'React', 'Node.js', 'Python', 'AWS', 'Docker', 'Kubernetes',
               'TypeScript', 'Next.js', 'Flutter', 'PostgreSQL', 'MongoDB', 'GraphQL',
@@ -360,10 +360,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="aspect-square bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center p-6 hover:bg-white/20 transition-all cursor-pointer group"
+                whileHover={{ scale: 1.05, y: -3 }}
+                className="h-20 sm:aspect-square bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-white/20 flex items-center justify-center p-3 sm:p-4 lg:p-6 hover:bg-white/20 transition-all cursor-pointer group"
               >
-                <span className="font-semibold text-center group-hover:text-blue-300 transition-colors">
+                <span className="text-sm sm:text-base font-semibold text-center leading-tight group-hover:text-blue-300 transition-colors">
                   {tech}
                 </span>
               </motion.div>
