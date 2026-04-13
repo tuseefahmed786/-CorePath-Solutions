@@ -87,9 +87,6 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
-            <Link to="/portfolio" className="text-foreground hover:text-primary transition-colors">
-              Portfolio
-            </Link>
             <Link to="/industries" className="text-foreground hover:text-primary transition-colors">
               Industries
             </Link>
@@ -168,9 +165,6 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-              <Link to="/portfolio" className="block py-2 hover:text-primary transition-colors">
-                Portfolio
-              </Link>
               <Link to="/industries" className="block py-2 hover:text-primary transition-colors">
                 Industries
               </Link>

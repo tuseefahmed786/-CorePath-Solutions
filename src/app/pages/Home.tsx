@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import {
   Code, Smartphone, Cloud, Shield, BarChart, Palette,
-  ArrowRight, CheckCircle, Star, TrendingUp, Users, Award,
+  ArrowRight, CheckCircle, TrendingUp, Users, Award,
   Zap, Target, Rocket, Globe, Lock, Cpu, Lightbulb, Settings
 } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
@@ -60,31 +60,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: '500+', label: 'Projects Completed' },
-    { value: '200+', label: 'Happy Clients' },
-    { value: '15+', label: 'Years Experience' },
-    { value: '98%', label: 'Client Satisfaction' },
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechStart Inc',
-      content: 'CorePath Solutions transformed our digital presence. Their expertise and dedication are unmatched.',
-      rating: 5,
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO, DataFlow Systems',
-      content: 'Working with CorePath was a game-changer. They delivered beyond our expectations.',
-      rating: 5,
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Founder, HealthTech Plus',
-      content: 'Professional, innovative, and reliable. CorePath is our go-to technology partner.',
-      rating: 5,
-    },
+    { value: 'Active', label: 'Client Projects' },
+    { value: 'Agile', label: 'Delivery Process' },
+    { value: '100%', label: 'Transparent Communication' },
+    { value: 'Focused', label: 'On Quality Delivery' },
   ];
 
   return (
@@ -145,10 +124,10 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/portfolio"
+                  to="/services"
                   className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-colors"
                 >
-                  View Our Work
+                  View Our Services
                 </Link>
               </motion.div>
             </motion.div>
@@ -177,8 +156,8 @@ export default function Home() {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">500+ Projects</p>
-                    <p className="text-sm text-gray-600">Successfully Delivered</p>
+                    <p className="font-semibold text-gray-900">Technology Solutions</p>
+                    <p className="text-sm text-gray-600">Built with care and clear communication</p>
                   </div>
                 </div>
               </motion.div>
@@ -275,17 +254,17 @@ export default function Home() {
                 About CorePath Solutions
               </div>
               <h2 className="text-4xl font-bold mb-6">
-                Your Trusted Technology Partner Since 2011
+                A Technology Partner You Can Grow With
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                We are a Houston-based technology company specializing in delivering innovative solutions that transform businesses. With over 15 years of experience, we've helped hundreds of companies achieve their digital goals.
+                We are a Houston-based technology company focused on building practical digital solutions for modern businesses.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
-                  'Industry-leading expertise',
+                  'Clear and honest communication',
                   'Client-focused approach',
                   'Cutting-edge technology',
-                  'Proven track record',
+                  'Hands-on support from day one',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
@@ -301,52 +280,6 @@ export default function Home() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Testimonials */}
-      <AnimatedSection className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">Client Success Stories</h2>
-            <p className="text-xl text-muted-foreground">
-              Hear what our clients have to say about working with us
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-lg mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/testimonials"
-              className="inline-flex items-center gap-2 text-primary hover:underline"
-            >
-              View All Testimonials
-              <ArrowRight className="w-5 h-5" />
-            </Link>
           </div>
         </div>
       </AnimatedSection>
@@ -463,7 +396,7 @@ export default function Home() {
                   { icon: <Zap className="w-6 h-6" />, title: 'Lightning Fast Delivery', description: 'Agile methodology ensures rapid, iterative progress' },
                   { icon: <Shield className="w-6 h-6" />, title: 'Enterprise Security', description: 'Bank-level security standards in every project' },
                   { icon: <Users className="w-6 h-6" />, title: 'Dedicated Teams', description: 'Expert developers assigned to your success' },
-                  { icon: <Globe className="w-6 h-6" />, title: 'Global Experience', description: 'Serving clients across 30+ countries worldwide' },
+                  { icon: <Globe className="w-6 h-6" />, title: 'Flexible Collaboration', description: 'Remote-friendly process with regular progress updates' },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -512,137 +445,17 @@ export default function Home() {
                         <Award className="w-8 h-8 text-white" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold text-foreground">98%</div>
-                        <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                        <div className="text-3xl font-bold text-foreground">Client</div>
+                        <div className="text-sm text-muted-foreground">Focused Team</div>
                       </div>
                     </div>
                     <p className="text-sm text-muted-foreground italic">
-                      "CorePath consistently exceeds expectations and delivers world-class solutions"
+                      "We are focused on earning trust through quality work and clear communication."
                     </p>
                   </div>
                 </motion.div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Success Metrics - Animated Counters */}
-      <AnimatedSection className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1750365919971-7dd273e7b317?w=1920')] bg-cover bg-center opacity-10" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">Delivering Measurable Results</h2>
-            <p className="text-xl opacity-90">
-              Numbers that showcase our impact and commitment to excellence
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { value: '$50M+', label: 'Revenue Generated', icon: <TrendingUp className="w-8 h-8" />, color: 'from-green-400 to-emerald-500' },
-              { value: '15+', label: 'Years Experience', icon: <Award className="w-8 h-8" />, color: 'from-yellow-400 to-orange-500' },
-              { value: '200+', label: 'Happy Clients', icon: <Users className="w-8 h-8" />, color: 'from-blue-400 to-cyan-500' },
-              { value: '500+', label: 'Projects Delivered', icon: <Rocket className="w-8 h-8" />, color: 'from-purple-400 to-pink-500' },
-            ].map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, type: 'spring' }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="text-center p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all"
-              >
-                <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                  {stat.icon}
-                </div>
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 + 0.3 }}
-                  className="text-5xl font-bold mb-2"
-                >
-                  {stat.value}
-                </motion.div>
-                <p className="text-lg opacity-90">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Featured Projects Preview */}
-      <AnimatedSection className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-xl text-muted-foreground">
-              A glimpse of our most impactful work
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'HealthCare Pro',
-                category: 'Healthcare',
-                image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
-                impact: '40% efficiency increase',
-                color: 'from-red-500 to-pink-500'
-              },
-              {
-                title: 'FinTech Mobile',
-                category: 'Financial Services',
-                image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800',
-                impact: '100K+ active users',
-                color: 'from-green-500 to-emerald-500'
-              },
-              {
-                title: 'AI Analytics Platform',
-                category: 'Data & AI',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
-                impact: '$2M revenue impact',
-                color: 'from-purple-500 to-violet-500'
-              },
-            ].map((project, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="group cursor-pointer"
-              >
-                <div className="relative h-64 rounded-2xl overflow-hidden mb-6 shadow-xl">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                  <div className={`absolute top-4 left-4 px-4 py-2 bg-gradient-to-r ${project.color} text-white rounded-full text-sm font-semibold`}>
-                    {project.category}
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white text-2xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-green-300 font-semibold">{project.impact}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:opacity-90 transition-opacity group"
-            >
-              View All Projects
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
           </div>
         </div>
       </AnimatedSection>
@@ -804,10 +617,10 @@ export default function Home() {
                 Schedule a Consultation
               </Link>
               <Link
-                to="/portfolio"
+                to="/services"
                 className="px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white rounded-xl hover:bg-white/20 transition-colors font-semibold text-lg"
               >
-                View Our Portfolio
+                Explore Our Services
               </Link>
             </div>
 

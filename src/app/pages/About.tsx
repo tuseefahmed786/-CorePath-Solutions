@@ -21,48 +21,16 @@ export default function About() {
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Global Impact',
-      description: 'Local expertise with a global perspective to serve diverse markets.',
-    },
-  ];
-
-  const timeline = [
-    { year: '2011', title: 'Founded', description: 'CorePath Solutions was established in Houston, Texas' },
-    { year: '2014', title: 'Expansion', description: 'Grew team to 20+ developers and designers' },
-    { year: '2017', title: 'Recognition', description: 'Awarded Best Tech Company in Houston' },
-    { year: '2020', title: 'Innovation', description: 'Launched AI and cloud services division' },
-    { year: '2023', title: 'Milestone', description: 'Completed 500+ successful projects' },
-    { year: '2026', title: 'Today', description: 'Leading technology partner for businesses nationwide' },
-  ];
-
-  const team = [
-    {
-      name: 'Victor Rodriguez',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
-    },
-    {
-      name: 'Sarah Mitchell',
-      role: 'CTO',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
-    },
-    {
-      name: 'James Chen',
-      role: 'Head of Development',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-    },
-    {
-      name: 'Emily Davis',
-      role: 'Head of Design',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400',
+      title: 'Reliable Collaboration',
+      description: 'Clear updates and close communication throughout every engagement.',
     },
   ];
 
   const achievements = [
-    { icon: <Users className="w-8 h-8" />, value: '50+', label: 'Team Members' },
-    { icon: <Award className="w-8 h-8" />, value: '25+', label: 'Industry Awards' },
-    { icon: <Globe className="w-8 h-8" />, value: '30+', label: 'Countries Served' },
-    { icon: <TrendingUp className="w-8 h-8" />, value: '$50M+', label: 'Client Revenue Impact' },
+    { icon: <Users className="w-8 h-8" />, value: 'Client', label: 'Focused Team' },
+    { icon: <Award className="w-8 h-8" />, value: 'Focused', label: 'On Quality Delivery' },
+    { icon: <Globe className="w-8 h-8" />, value: 'Remote', label: 'Collaboration Ready' },
+    { icon: <TrendingUp className="w-8 h-8" />, value: '100%', label: 'Transparent Communication' },
   ];
 
   return (
@@ -78,7 +46,7 @@ export default function About() {
           >
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">About CorePath Solutions</h1>
             <p className="text-xl opacity-90">
-              Empowering businesses through innovative technology solutions since 2011
+              A technology company focused on practical, high-quality solutions
             </p>
           </motion.div>
         </div>
@@ -115,8 +83,8 @@ export default function About() {
               </div>
               <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
               <p className="text-lg text-muted-foreground">
-                To be the most trusted technology partner for businesses worldwide, recognized for our innovation,
-                excellence, and unwavering commitment to client success.
+                To become a trusted technology partner by delivering reliable work, maintaining honest communication,
+                and building long-term client relationships from day one.
               </p>
             </motion.div>
           </div>
@@ -146,38 +114,6 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Timeline */}
-      <AnimatedSection className="py-20 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Journey</h2>
-            <p className="text-xl text-muted-foreground">Milestones that shaped our story</p>
-          </div>
-
-          <div className="space-y-8">
-            {timeline.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex items-center gap-8"
-              >
-                <div className="flex-shrink-0 w-24 text-right">
-                  <div className="text-2xl font-bold text-primary">{item.year}</div>
-                </div>
-                <div className="flex-shrink-0 w-4 h-4 bg-primary rounded-full" />
-                <div className="flex-grow p-6 bg-muted/50 rounded-xl">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -222,8 +158,8 @@ export default function About() {
       <AnimatedSection className="py-20 bg-gradient-to-br from-primary to-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Achievements</h2>
-            <p className="text-xl opacity-90">Numbers that speak to our impact</p>
+            <h2 className="text-4xl font-bold mb-4">What You Can Expect</h2>
+            <p className="text-xl opacity-90">How we work with clients through clear communication and dependable delivery</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

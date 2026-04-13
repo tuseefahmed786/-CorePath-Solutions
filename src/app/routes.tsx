@@ -11,13 +11,11 @@ import CloudDevOps from "./pages/services/CloudDevOps";
 import Cybersecurity from "./pages/services/Cybersecurity";
 import AIDataSolutions from "./pages/services/AIDataSolutions";
 import DigitalMarketing from "./pages/services/DigitalMarketing";
-import Portfolio from "./pages/Portfolio";
 import Industries from "./pages/Industries";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
-import Careers from "./pages/Careers";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
@@ -38,13 +36,11 @@ export const router = createBrowserRouter([
       { path: "services/cybersecurity", Component: Cybersecurity },
       { path: "services/ai-data-solutions", Component: AIDataSolutions },
       { path: "services/digital-marketing", Component: DigitalMarketing },
-      { path: "portfolio", Component: Portfolio },
       { path: "industries", Component: Industries },
       { path: "blog", Component: Blog },
       { path: "contact", Component: Contact },
       { path: "testimonials", Component: Testimonials },
       { path: "faq", Component: FAQ },
-      { path: "careers", Component: Careers },
       { path: "privacy", Component: Privacy },
       { path: "terms", Component: Terms },
       { path: "*", Component: NotFound },

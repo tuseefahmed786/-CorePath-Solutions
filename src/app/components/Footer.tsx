@@ -15,12 +15,10 @@ export default function Footer() {
 
   const quickLinks = [
     { name: 'About Us', path: '/about' },
-    { name: 'Portfolio', path: '/portfolio' },
     { name: 'Industries', path: '/industries' },
     { name: 'Blog', path: '/blog' },
     { name: 'Testimonials', path: '/testimonials' },
     { name: 'FAQ', path: '/faq' },
-    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ];
 
